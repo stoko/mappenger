@@ -83,27 +83,6 @@ public class MapActivity extends AppCompatActivity implements ServiceListener {
 
         _mpService = MappengerService.GetInstance();
         _mpService.addListener(this);
-        _timer.scheduleAtFixedRate(new MessagesTask(), 0, 5000);
-        _sManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
-        Sensor mySensor = _sManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-
-        SensorEventListener mySensorEventListener = new SensorEventListener(){
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-            }
-
-            @Override
-            public void onSensorChanged(SensorEvent event) {
-                //device heading in degrees
-                _bearing = event.values[0];
-            }
-        };
-
-        _sManager.registerListener(mySensorEventListener, mySensor, 0);
-
-        _firstRun = true;
 
         // Get the location manager
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
