@@ -74,6 +74,7 @@ public class MapActivity extends AppCompatActivity implements ServiceListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         setUpMapIfNeeded();
+        // GIT VERSION CONTROL TEST
     }
 
     @Override
