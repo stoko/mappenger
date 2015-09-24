@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Mappenger</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_message_details">MessageDetailsActivity</string>
+    <string name="title_activity_messages">MessagesActivity</string>
+    <string name="title_activity_throw_message">ThrowMessage</string>
+    <string name="title_activity_register">Register</string>
+    <string name="invalid_login_message">Invalid Login.</string>
+    <string name="mappenger_ws_address">http://mappengerws.azurewebsites.net/</string>
+    <string name="exception_on_login">Something went wrong. Check your Internet connection.</string>
+    <string name="enable_gps_alert_title">GPS Not Enabled</string>
+    <string name="enable_gps_alert_message">You must enable GPS to use this application.</string>
+    <string name="logging_in_progress_message">Logging you in...</string>
+    <string name="ws_get_messages_endpoint">api/TrackMessages</string>
+    <string name="service_notification_title">MAPPENGER Found a message!</string>
+    <string name="service_notification_text">See the message now!</string>
+    <string name="ws_get_message_at_point_endpoint">api/MessagePaths</string>
+    <string name="ws_get_message_by_pkrk_endpoint">api/FoundMessages</string>
+    <string name="ws_post_found_message_endpoint">api/FoundMessages</string>
+    <string name="ws_get_found_messages">api/FoundMessages</string>
+    <string name="signing_up_progress_message">Signing you up...</string>
+    <string name="ws_sign_up_endpoint">api/Account/Register</string>
+    <string name="throwing_progress_message">Throwing your message...</string>
+    <string name="ws_throw_message_endpoint">api/MessagePaths</string>
+    <string name="speed_1_icon">snail</string>
+    <string name="speed_2_icon">hare</string>
+    <string name="speed_3_icon">dragon</string>
+</resources>
