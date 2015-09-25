@@ -23,7 +23,8 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Snail"
+                android:drawableLeft="@drawable/snail_g"
+                android:text=""
                 android:id="@+id/radioSpeed1"
                 android:layout_weight="0.12"
                 android:checked="true"
@@ -32,17 +33,19 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rabbit"
+                android:text=""
                 android:id="@+id/radioSpeed2"
                 android:layout_weight="0.10"
+                android:drawableLeft="@drawable/hare_g"
                 android:onClick="onRadioButtonClicked" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dragon"
+                android:text=""
                 android:id="@+id/radioSpeed3"
                 android:layout_weight="0.09"
+                android:drawableLeft="@drawable/dragon_g"
                 android:onClick="onRadioButtonClicked" />
 
         </RadioGroup>
