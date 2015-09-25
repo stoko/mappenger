@@ -14,15 +14,6 @@
         android:layout_alignParentStart="true"
         android:weightSum="1">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Throw message"
-            android:id="@+id/btnThrow"
-            android:onClick="ThrowMessage"
-            android:layout_above="@+id/textView2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -49,7 +40,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eagle"
+                android:text="Dragon"
                 android:id="@+id/radioSpeed3"
                 android:layout_weight="0.09"
                 android:onClick="onRadioButtonClicked" />
@@ -62,7 +53,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="150dp">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,11 +61,19 @@
                 android:id="@+id/txtMessage"
                 android:gravity="top"
                 android:singleLine="false"
-                android:background="#ffff00"
+                android:background="@drawable/back"
                 android:minHeight="150dp" />
         </ScrollView>
 
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Throw message"
+            android:id="@+id/btnThrow"
+            android:onClick="ThrowMessage"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </LinearLayout>
 
 </RelativeLayout>
