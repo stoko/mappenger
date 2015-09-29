@@ -48,6 +48,13 @@
                 android:drawableLeft="@drawable/dragon_g"
                 android:onClick="onRadioButtonClicked" />
 
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioStatic"
+                android:drawableLeft="@drawable/mushroom_g"
+                android:onClick="onRadioButtonClicked" />
+
         </RadioGroup>
 
         <TextView android:text="Message Text:" android:layout_width="wrap_content"

@@ -22,6 +22,7 @@ public class ThrowMessage extends AppCompatActivity {
     private ProgressDialog _prSend = null;
 
     private int _speedId = 1;
+    private boolean _static = false;
     private String _iconType = "snail";
 
     @Override
@@ -54,6 +55,8 @@ public class ThrowMessage extends AppCompatActivity {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
+        _static = false;
+
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.radioSpeed1:
@@ -74,6 +77,11 @@ public class ThrowMessage extends AppCompatActivity {
                     _iconType = getString(R.string.speed_3_icon);
                 }
                 break;
+            case R.id.radioStatic:
+                if(checked) {
+                    _static = true;
+                }
+                break;
         }
     }
 
@@ -83,7 +91,7 @@ public class ThrowMessage extends AppCompatActivity {
         String msg = ((EditText)findViewById(R.id.txtMessage)).getText().toString();
 
         _prSend.show();
-        new AsyncThrowMessage().execute(getString(R.string.mappenger_ws_address), String.valueOf(lat), String.valueOf(lon), msg, String.valueOf(_speedId), _iconType);
+        new AsyncThrowMessage().execute(getString(R.string.mappenger_ws_address), String.valueOf(lat), String.valueOf(lon), msg, String.valueOf(_speedId), _iconType, String.valueOf(_static));
     }
 
     public void BackToHome() {
@@ -99,7 +107,7 @@ public class ThrowMessage extends AppCompatActivity {
 
                 HttpClient client = new HttpClient(params[0], pref.getString("access_token", null));
 
-                client.sendPostThrowMessage(getString(R.string.ws_throw_message_endpoint), params[1], params[2], params[3], params[4], params[5]);
+                client.sendPostThrowMessage(getString(R.string.ws_throw_message_endpoint), params[1], params[2], params[3], params[4], params[5], params[6]);
 
                 return null;
             } catch (Exception ex) {

@@ -271,6 +271,11 @@ public class MapActivity extends AppCompatActivity implements ServiceListener {
                     return R.drawable.dragon_g;
                 else
                     return R.drawable.dragon_p;
+            case "static":
+                if(mine)
+                    return R.drawable.mushroom_g;
+                else
+                    return R.drawable.mushroom_p;
             default:
                 if(mine)
                     return R.drawable.star_3;

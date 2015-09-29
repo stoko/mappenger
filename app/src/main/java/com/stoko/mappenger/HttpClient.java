@@ -290,7 +290,7 @@ public class HttpClient {
         return;
     }
 
-    public void sendPostThrowMessage(String endPoint, String lat, String lon, String message, String speed, String iconType) throws Exception {
+    public void sendPostThrowMessage(String endPoint, String lat, String lon, String message, String speed, String iconType, String isStatic) throws Exception {
         URL obj = new URL(_url + endPoint);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
@@ -299,7 +299,7 @@ public class HttpClient {
         con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
         con.setRequestProperty("Authorization", "Bearer " + _access_token);
 
-        String data = "Latitude="+lat+"&Longitude="+lon+"&MessageText="+message+"&Speed="+speed+"&IconType="+iconType;
+        String data = "Latitude="+lat+"&Longitude="+lon+"&MessageText="+message+"&Speed="+speed+"&IconType="+iconType+"&Static="+isStatic;
 
         // Send post request
         con.setDoOutput(true);
